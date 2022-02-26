@@ -1,0 +1,13 @@
+version: '3.11'
+services:
+  tbc-database:
+    image: postgres:9.6
+    environment:
+      - POSTGRES_USER=tbc
+      - POSTGRES_PASSWORD=tbc
+      - POSTGRES_DB=tbc
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./tbc-database:/var/lib/postgresql/data
+    restart: always
